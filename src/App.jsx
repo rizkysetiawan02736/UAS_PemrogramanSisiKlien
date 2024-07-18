@@ -44,7 +44,7 @@ function App() {
             </Route>
             <Route path="categories">
             <Route index element={<RequireAuth><List columns={categoryColumns} /></RequireAuth>}></Route>
-              <Route path=":userId" element={<RequireAuth><List columns={categoryColumns} /></RequireAuth>}></Route>
+              <Route path=":categoryId" element={<RequireAuth><Single columns={categoryColumns} /></RequireAuth>}></Route>
               <Route path="new" 
               element={<RequireAuth><New inputs={categoryInputs} title="Add New Category" /></RequireAuth>}></Route>
             
